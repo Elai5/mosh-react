@@ -4,13 +4,20 @@
 function ListGroup() {
   let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
   items = [];
-  if (items.length === 0)
-    return (
-      <>
-        <h1>list item</h1>
-        <p>No item found</p>
-      </>
-    );
+
+  return(
+    <>
+    <h1>List Item</h1>
+    {items.length === 0 ? <p>no item found</p> : null}
+    </>
+  )
+  // if (items.length === 0)
+  //   return (
+  //     <>
+  //       <h1>list item</h1>
+  //       <p>No item found</p>
+  //     </>
+  //   );
 
   items.map((item) => <li>{item}</li>);
   return (
