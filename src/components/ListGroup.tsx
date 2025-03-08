@@ -5,12 +5,14 @@ function ListGroup() {
   let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
   items = [];
 
-  return(
+  const message = items.length === 0 ? <p>no item found</p> : null;
+
+  return (
     <>
-    <h1>List Item</h1>
-    {items.length === 0 ? <p>no item found</p> : null}
+      <h1>List Item</h1>
+      {message}
     </>
-  )
+  );
   // if (items.length === 0)
   //   return (
   //     <>
